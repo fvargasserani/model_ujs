@@ -1,24 +1,6 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Answers:
+1. data-confirm: views/posts/_form.html.erb
+2. data-disable-with: views/posts/_form.html.erb
+3. views/posts/index.html.erb
+4. views/users/_form.html.erb y application.js
+5. application.js

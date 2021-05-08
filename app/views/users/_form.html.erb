@@ -1,0 +1,12 @@
+<%= form_for :users, remote:true, html: { class: "form" } do |f| %>
+
+  <div id='name' class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "Create user" %>
+  </div>
+
+<% end %>

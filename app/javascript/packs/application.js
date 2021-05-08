@@ -6,8 +6,29 @@
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
+import $ from 'jquery'
 import "channels"
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+window.$ = $;
+
+$(document).ready(function () {
+    $(".form").submit(function (event) {
+        var formData = {
+            name: $("#name").val(),
+        };
+
+        $.ajax({
+            type: "POST",
+            url: '/users/',
+            data: formData,
+            dataType: 'JSON',
+        }).done(function () {
+            ('#new-div').append('<div id="my_posts"></div>');
+        });
+        event.preventDefault();
+    });
+});
